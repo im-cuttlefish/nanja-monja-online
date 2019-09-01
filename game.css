@@ -1,0 +1,21 @@
+#game {
+  position: relative;
+}
+
+/*
+  画像の大きさと同じサイズの疑似要素を作ることで、高さと幅を確保する。
+  これがないと、pointは#gameのimgに覆われて見えない。
+*/
+#game::before {
+  content: "";
+  display: block;
+  width: 194px;
+  height: 252px;
+}
+
+#game img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
